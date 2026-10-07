@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ShopKart - Product Listing</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            <span>◉</span>
+            ShopKart
+        </div>
+
+        <div class="search-box">
+            <input type="text" placeholder="Search for products...">
+            <span>⌕</span>
+        </div>
+
+        <div class="nav-icons">
+            <span>🛒</span>
+            <span>♙</span>
+        </div>
+
+        <div class="mobile-menu">☰</div>
+
+    </nav>
+
+
+    <main class="container">
+
+        <div class="mobile-filters">
+            <button>☷ Filters</button>
+            <button>⇅ Sort</button>
+        </div>
+
+
+        <div class="layout">
+
+            <aside class="sidebar">
+
+                <h3>Filters</h3>
+
+                <div class="filter-group">
+                    <h4>Category</h4>
+
+                    <label><input type="checkbox"> Laptops</label>
+                    <label><input type="checkbox"> Desktops</label>
+                    <label><input type="checkbox"> Tablets</label>
+                    <label><input type="checkbox"> Accessories</label>
+                </div>
+
+                <div class="filter-group">
+                    <h4>Price Range</h4>
+
+                    <label><input type="checkbox"> ₹0 - ₹25,000</label>
+                    <label><input type="checkbox"> ₹25,000 - ₹50,000</label>
+                    <label><input type="checkbox"> ₹50,000 - ₹75,000</label>
+                    <label><input type="checkbox"> ₹75,000+</label>
+                </div>
+
+                <div class="filter-group">
+                    <h4>Brand</h4>
+
+                    <label><input type="checkbox"> Dell</label>
+                    <label><input type="checkbox"> HP</label>
+                    <label><input type="checkbox"> Lenovo</label>
+                    <label><input type="checkbox"> Apple</label>
+                    <label><input type="checkbox"> ASUS</label>
+                </div>
+
+                <button class="apply-btn">Apply Filters</button>
+
+            </aside>
+
+
+            <section class="products-section">
+
+                <div class="products-header">
+
+                    <div>
+                        <p class="category-name">Electronics &nbsp;›&nbsp; Laptops</p>
+                        <p class="showing">Showing 12 results</p>
+                    </div>
+
+                    <select>
+                        <option>Popularity</option>
+                        <option>Price: Low to High</option>
+                        <option>Price: High to Low</option>
+                    </select>
+
+                </div>
+
+
+                <div class="products-grid">
+
+
+                    <div class="product-card">
+
+                        <div class="product-image">
+                            <span class="badge sale">SALE</span>
+                            <span class="heart">♡</span>
+
+                            <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=600&q=80" alt="Dell Laptop">
+                        </div>
+
+                        <div class="product-info">
+
+                            <p class="category">Dell</p>
+
+                            <h3>Dell Inspiron 15</h3>
+
+                            <div class="rating">
+                                ★★★★☆ <span>(120)</span>
+                            </div>
+
+                            <div class="price">
+                                ₹45,990
+                                <del>₹50,990</del>
+                            </div>
+
+                            <button>Add to Cart</button>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="product-card">
+
+                        <div class="product-image">
+                            <span class="badge new">NEW</span>
+                            <span class="heart">♡</span>
+
+                            <img src="https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&w=600&q=80" alt="HP Pavilion">
+                        </div>
+
+                        <div class="product-info">
+
+                            <p class="category">HP</p>
+
+                            <h3>HP Pavilion</h3>
+
+                            <div class="rating">
+                                ★★★★☆ <span>(82)</span>
+                            </div>
+
+                            <div class="price">
+                                ₹52,990
+                            </div>
+
+                            <button>Add to Cart</button>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="product-card">
+
+                        <div class="product-image">
+                            <span class="heart">♡</span>
+
+                            <img src="https://images.unsplash.com/photo-1603302576837-37561b2e2302?auto=format&fit=crop&w=600&q=80" alt="Lenovo Laptop">
+                        </div>
+
+                        <div class="product-info">
+
+                            <p class="category">Lenovo</p>
+
+                            <h3>Lenovo IdeaPad</h3>
+
+                            <div class="rating">
+                                ★★★★☆ <span>(64)</span>
+                            </div>
+
+                            <div class="price">
+                                ₹38,990
+                            </div>
+
+                            <button>Add to Cart</button>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="product-card">
+
+                        <div class="product-image">
+                            <span class="badge sale">SALE</span>
+                            <span class="heart">♡</span>
+
+                            <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=600&q=80" alt="MacBook">
+                        </div>
+
+                        <div class="product-info">
+
+                            <p class="category">Apple</p>
+
+                            <h3>MacBook Air M2</h3>
+
+                            <div class="rating">
+                                ★★★★★ <span>(210)</span>
+                            </div>
+
+                            <div class="price">
+                                ₹89,990
+                            </div>
+
+                            <button>Add to Cart</button>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="product-card">
+
+                        <div class="product-image">
+                            <span class="badge new">NEW</span>
+                            <span class="heart">♡</span>
+
+                            <img src="https://images.unsplash.com/photo-1593642702749-b7d2a804fbcf?auto=format&fit=crop&w=600&q=80" alt="ASUS Laptop">
+                        </div>
+
+                        <div class="product-info">
+
+                            <p class="category">ASUS</p>
+
+                            <h3>ASUS Vivobook</h3>
+
+                            <div class="rating">
+                                ★★★★☆ <span>(78)</span>
+                            </div>
+
+                            <div class="price">
+                                ₹41,990
+                            </div>
+
+                            <button>Add to Cart</button>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="product-card">
+
+                        <div class="product-image">
+                            <span class="heart">♡</span>
+
+                            <img src="https://images.unsplash.com/photo-1611078489935-0cb964de46d6?auto=format&fit=crop&w=600&q=80" alt="Dell Laptop">
+                        </div>
+
+                        <div class="product-info">
+
+                            <p class="category">Dell</p>
+
+                            <h3>Dell XPS 13</h3>
+
+                            <div class="rating">
+                                ★★★★★ <span>(146)</span>
+                            </div>
+
+                            <div class="price">
+                                ₹90,990
+                            </div>
+
+                            <button>Add to Cart</button>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="product-card">
+
+                        <div class="product-image">
+                            <span class="badge sale">SALE</span>
+                            <span class="heart">♡</span>
+
+                            <img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&w=600&q=80" alt="HP Laptop">
+                        </div>
+
+                        <div class="product-info">
+
+                            <p class="category">HP</p>
+
+                            <h3>HP 15 Laptop</h3>
+
+                            <div class="rating">
+                                ★★★★☆ <span>(95)</span>
+                            </div>
+
+                            <div class="price">
+                                ₹32,990
+                                <del>₹36,990</del>
+                            </div>
+
+                            <button>Add to Cart</button>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="product-card">
+
+                        <div class="product-image">
+                            <span class="badge new">NEW</span>
+                            <span class="heart">♡</span>
+
+                            <img src="https://images.unsplash.com/photo-1593642532400-2682810df593?auto=format&fit=crop&w=600&q=80" alt="Laptop">
+                        </div>
+
+                        <div class="product-info">
+
+                            <p class="category">Lenovo</p>
+
+                            <h3>Lenovo ThinkBook</h3>
+
+                            <div class="rating">
+                                ★★★★☆ <span>(71)</span>
+                            </div>
+
+                            <div class="price">
+                                ₹56,990
+                            </div>
+
+                            <button>Add to Cart</button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+</body>
+</html>

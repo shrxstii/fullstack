@@ -1,0 +1,414 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f8fafc;
+    color: #111827;
+}
+
+.navbar {
+    height: 70px;
+    background: white;
+    border-bottom: 1px solid #e5e7eb;
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    padding: 0 5%;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #111827;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.logo span {
+    color: #2563eb;
+}
+
+.search-box {
+    width: 430px;
+    height: 38px;
+    background: #f8fafc;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+}
+
+.search-box input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 12px;
+}
+
+.search-box span {
+    color: #64748b;
+    font-size: 18px;
+}
+
+.nav-icons {
+    margin-left: auto;
+    display: flex;
+    gap: 22px;
+    font-size: 17px;
+}
+
+.mobile-menu {
+    display: none;
+    font-size: 22px;
+}
+
+.container {
+    max-width: 1280px;
+    margin: auto;
+    padding: 28px 25px 50px;
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 32px;
+}
+
+.sidebar {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 18px;
+    height: fit-content;
+}
+
+.sidebar h3 {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.filter-group {
+    margin-bottom: 23px;
+}
+
+.filter-group h4 {
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.filter-group label {
+    display: block;
+    color: #6b7280;
+    font-size: 12px;
+    margin-bottom: 9px;
+}
+
+.filter-group input {
+    margin-right: 7px;
+    accent-color: #2563eb;
+}
+
+.apply-btn {
+    width: 100%;
+    border: none;
+    background: #2563eb;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.apply-btn:hover {
+    background: #1d4ed8;
+}
+
+.products-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.category-name {
+    color: #2563eb;
+    font-size: 12px;
+    margin-bottom: 7px;
+}
+
+.showing {
+    color: #6b7280;
+    font-size: 12px;
+}
+
+.products-header select {
+    border: 1px solid #e5e7eb;
+    background: white;
+    border-radius: 5px;
+    padding: 8px 12px;
+    color: #6b7280;
+    font-size: 11px;
+    outline: none;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.product-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    transition: 0.25s;
+    overflow: hidden;
+}
+
+.product-card:hover {
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.10);
+    transform: translateY(-3px);
+}
+
+.product-image {
+    height: 180px;
+    background: #f8fafc;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 13px;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: 0.3s;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.08);
+}
+
+.heart {
+    position: absolute;
+    right: 9px;
+    top: 8px;
+    z-index: 2;
+    width: 26px;
+    height: 26px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #94a3b8;
+    font-size: 17px;
+}
+
+.badge {
+    position: absolute;
+    left: 8px;
+    top: 8px;
+    z-index: 2;
+    padding: 4px 7px;
+    border-radius: 4px;
+    color: white;
+    font-size: 8px;
+    font-weight: bold;
+}
+
+.sale {
+    background: #dc2626;
+}
+
+.new {
+    background: #16a34a;
+}
+
+.category {
+    color: #6b7280;
+    font-size: 11px;
+    margin-bottom: 5px;
+}
+
+.product-info h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.rating {
+    color: #f59e0b;
+    font-size: 11px;
+    margin-bottom: 9px;
+}
+
+.rating span {
+    color: #9ca3af;
+}
+
+.price {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 13px;
+}
+
+.price del {
+    color: #9ca3af;
+    font-size: 13px;
+    font-weight: normal;
+    margin-left: 5px;
+}
+
+.product-info button {
+    width: 100%;
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+    margin-top: auto;
+}
+
+.product-info button:hover {
+    background: #1d4ed8;
+}
+
+.mobile-filters {
+    display: none;
+}
+
+
+@media (min-width: 1280px) {
+
+    .products-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+}
+
+
+@media (min-width: 640px) and (max-width: 1023px) {
+
+    .navbar {
+        padding: 0 25px;
+    }
+
+    .search-box {
+        width: 300px;
+    }
+
+    .container {
+        padding: 22px;
+    }
+
+    .mobile-filters {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 18px;
+    }
+
+    .mobile-filters button {
+        background: white;
+        border: 1px solid #e5e7eb;
+        border-radius: 5px;
+        padding: 8px 15px;
+        font-size: 12px;
+    }
+
+    .layout {
+        display: block;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 639px) {
+
+    .navbar {
+        height: 62px;
+        padding: 0 18px;
+        gap: 0;
+    }
+
+    .search-box,
+    .nav-icons {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: block;
+        margin-left: auto;
+    }
+
+    .container {
+        padding: 18px 14px 40px;
+    }
+
+    .mobile-filters {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        margin-bottom: 15px;
+    }
+
+    .mobile-filters button {
+        width: 50%;
+        background: white;
+        border: 1px solid #e5e7eb;
+        border-radius: 5px;
+        padding: 9px;
+        font-size: 12px;
+        color: #374151;
+    }
+
+    .layout {
+        display: block;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .products-header {
+        margin-bottom: 15px;
+    }
+
+    .products-header select {
+        display: none;
+    }
+
+    .products-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .product-image {
+        height: 220px;
+    }
+
+}

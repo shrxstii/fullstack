@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Better Now Closer</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #171917;
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+            padding: 22px;
+        }
+
+        .main {
+            max-width: 1200px;
+            margin: auto;
+            padding: 4px;
+            border: 1px solid #3a3d39;
+            border-radius: 16px;
+            background: #151715;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1.12fr;
+            grid-template-rows: 210px 175px 190px;
+            gap: 10px;
+        }
+
+        .card {
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .cream {
+            background: #f3f0e8;
+            color: #005448;
+        }
+
+        .green {
+            background: #00594e;
+            color: #f4f1e8;
+        }
+
+        .red {
+            background: #ed0000;
+            color: white;
+        }
+
+
+        /* TOP LEFT */
+
+        .title-card {
+            grid-column: 1 / 3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .title-card h1 {
+            font-size: 72px;
+            line-height: .88;
+            letter-spacing: -5px;
+            font-weight: 700;
+        }
+
+        .title-card .small-text {
+            font-size: 17px;
+            color: #111;
+            margin: 0 8px;
+            vertical-align: middle;
+        }
+
+
+        /* TOP RIGHT */
+
+        .hand-card {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hand {
+            font-size: 105px;
+            transform: rotate(-8deg);
+        }
+
+
+        /* LEFT RED CARD */
+
+        .adaptation {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .adapt-box {
+            width: 75%;
+            height: 78%;
+            background: #f3f0e8;
+            border-radius: 25px;
+            color: #e40000;
+            padding: 17px;
+            position: relative;
+        }
+
+        .adapt-top {
+            display: flex;
+            justify-content: space-between;
+            font-size: 11px;
+            font-weight: bold;
+        }
+
+        .adapt-box h2 {
+            font-size: 32px;
+            font-style: italic;
+            line-height: 1;
+            margin-top: 28px;
+        }
+
+        .adapt-box p {
+            position: absolute;
+            bottom: 15px;
+            left: 18px;
+            color: #e40000;
+            font-size: 10px;
+        }
+
+
+        /* SYNC CARD */
+
+        .sync {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .sync h2 {
+            font-size: 45px;
+            color: #e00000;
+            letter-spacing: -2px;
+        }
+
+        .sync-icon {
+            display: inline-block;
+            width: 28px;
+            height: 38px;
+            background: #e00000;
+            border-radius: 5px;
+            margin-right: 9px;
+            transform: skewY(-10deg);
+        }
+
+
+        /* RIGHT PEOPLE CARD */
+
+        .people {
+            grid-column: 3;
+            grid-row: 2 / 4;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .people h2 {
+            color: #e00000;
+            font-size: 45px;
+            line-height: .9;
+            text-align: center;
+            letter-spacing: -2px;
+        }
+
+        .website {
+            text-align: center;
+            color: #e00000;
+            font-size: 14px;
+            margin-top: 15px;
+        }
+
+        .characters {
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            gap: 4px;
+        }
+
+        .person {
+            width: 90px;
+            height: 150px;
+            border-radius: 45px 45px 15px 15px;
+            background: #eee;
+            border: 3px solid #111;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            font-size: 60px;
+            padding-bottom: 8px;
+        }
+
+        .person:nth-child(1) {
+            background: #e00000;
+        }
+
+        .person:nth-child(2) {
+            background: white;
+        }
+
+        .person:nth-child(3) {
+            background: #00594e;
+        }
+
+
+        /* BOTTOM LEFT */
+
+        .message {
+            padding: 28px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .message-box {
+            background: #00594e;
+            color: white;
+            width: 90%;
+            padding: 11px 14px;
+            border-radius: 13px;
+            font-size: 14px;
+        }
+
+        .reply {
+            background: #68e35e;
+            color: #064c42;
+            align-self: flex-end;
+        }
+
+        .message-user {
+            font-size: 28px;
+            text-align: right;
+        }
+
+
+        /* BOTTOM CENTER */
+
+        .touch {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .touch-text {
+            background: #111;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 12px;
+            font-family: monospace;
+            font-size: 16px;
+            margin-bottom: 22px;
+        }
+
+        .avatars {
+            display: flex;
+            gap: 8px;
+        }
+
+        .avatar {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            border: 2px solid #111;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f3f0e8;
+            font-size: 28px;
+        }
+
+        .avatar:nth-child(2) {
+            background: #68e35e;
+        }
+
+
+        /* HOVER */
+
+        .card {
+            transition: transform .25s, box-shadow .25s;
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,.25);
+        }
+
+
+        /* TABLET */
+
+        @media (max-width: 900px) {
+
+            body {
+                padding: 14px;
+            }
+
+            .grid {
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 180px 170px 170px 210px;
+            }
+
+            .title-card {
+                grid-column: 1 / 3;
+            }
+
+            .hand-card {
+                grid-column: 1 / 3;
+            }
+
+            .people {
+                grid-column: 2;
+                grid-row: 3 / 5;
+            }
+
+            .title-card h1 {
+                font-size: 55px;
+            }
+
+            .people h2 {
+                font-size: 35px;
+            }
+
+        }
+
+
+        /* MOBILE */
+
+        @media (max-width: 600px) {
+
+            body {
+                padding: 8px;
+            }
+
+            .main {
+                border-radius: 12px;
+            }
+
+            .grid {
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .card {
+                min-height: 190px;
+            }
+
+            .title-card {
+                min-height: 190px;
+            }
+
+            .title-card h1 {
+                font-size: 45px;
+                letter-spacing: -3px;
+            }
+
+            .hand-card {
+                min-height: 200px;
+            }
+
+            .hand {
+                font-size: 80px;
+            }
+
+            .adaptation {
+                min-height: 210px;
+            }
+
+            .sync {
+                min-height: 170px;
+            }
+
+            .people {
+                min-height: 420px;
+            }
+
+            .people h2 {
+                font-size: 38px;
+            }
+
+            .person {
+                width: 75px;
+                height: 125px;
+                font-size: 45px;
+            }
+
+            .message {
+                min-height: 190px;
+            }
+
+            .touch {
+                min-height: 190px;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="main">
+
+        <div class="grid">
+
+            <div class="card cream title-card">
+                <h1>
+                    better<br>
+                    now <span class="small-text">☻</span> closer
+                </h1>
+            </div>
+
+
+            <div class="card green hand-card">
+                <div class="hand">🤝</div>
+            </div>
+
+
+            <div class="card red adaptation">
+
+                <div class="adapt-box">
+
+                    <div class="adapt-top">
+                        <span>24 Mar</span>
+                        <span>09:00–10:00</span>
+                    </div>
+
+                    <h2>
+                        Team<br>
+                        Adaptation
+                    </h2>
+
+                    <p>HR grooming</p>
+
+                </div>
+
+            </div>
+
+
+            <div class="card cream sync">
+
+                <h2>
+                    <span class="sync-icon"></span>
+                    sync
+                </h2>
+
+            </div>
+
+
+            <div class="card cream people">
+
+                <div>
+                    <h2>
+                        Bring People<br>
+                        Together
+                    </h2>
+
+                    <p class="website">[ sync.com ]</p>
+                </div>
+
+                <div class="characters">
+
+                    <div class="person">👩</div>
+                    <div class="person">👨</div>
+                    <div class="person">👩</div>
+
+                </div>
+
+            </div>
+
+
+            <div class="card cream message">
+
+                <div class="message-box">
+                    Hi! Where are you?
+                </div>
+
+                <div class="message-user">👩🏻</div>
+
+                <div class="message-box reply">
+                    I'll be in touch
+                </div>
+
+            </div>
+
+
+            <div class="card green touch">
+
+                <div class="touch-text">
+                    I'll be in touch
+                </div>
+
+                <div class="avatars">
+                    <div class="avatar">👨🏻</div>
+                    <div class="avatar">👩🏻</div>
+                    <div class="avatar">👩🏻</div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

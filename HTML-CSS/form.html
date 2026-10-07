@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Form</title>
+    <style>
+        body {
+            font-family: Arial;
+            background-color: lightgray;
+        }
+
+        .form {
+            width: 350px;
+            background-color: white;
+            padding: 25px;
+            margin: 50px auto;
+            border: 1px solid gray;
+            border-radius: 10px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: blue;
+            color: white;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form">
+        <h2>Registration Form</h2>
+
+        <input type="text" placeholder="Enter Name">
+        <input type="email" placeholder="Enter Email">
+        <input type="password" placeholder="Enter Password">
+
+        <select>
+            <option>Select Course</option>
+            <option>CSE</option>
+            <option>AIML</option>
+            <option>Data Science</option>
+        </select>
+
+        <textarea placeholder="Enter Address"></textarea>
+
+        <button>Submit</button>
+    </div>
+
+</body>
+</html>

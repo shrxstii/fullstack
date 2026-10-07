@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Restaurant Menu</title>
+    <style>
+        body {
+            font-family: Arial;
+            background-color: lightgray;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .menu {
+            width: 80%;
+            margin: 30px auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+        }
+
+        .item {
+            background-color: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 3px 8px gray;
+        }
+
+        .item img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .price {
+            color: green;
+            font-weight: bold;
+        }
+
+        button {
+            padding: 8px 15px;
+            background-color: red;
+            color: white;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>My Restaurant</h1>
+
+    <div class="menu">
+
+        <div class="item">
+            <img src="https://picsum.photos/300/150?1">
+            <h2>Pizza</h2>
+            <p>Cheese Pizza</p>
+            <p class="price">₹250</p>
+            <button>Order</button>
+        </div>
+
+        <div class="item">
+            <img src="https://picsum.photos/300/150?2">
+            <h2>Burger</h2>
+            <p>Veg Burger</p>
+            <p class="price">₹150</p>
+            <button>Order</button>
+        </div>
+
+        <div class="item">
+            <img src="https://picsum.photos/300/150?3">
+            <h2>Pasta</h2>
+            <p>White Sauce Pasta</p>
+            <p class="price">₹200</p>
+            <button>Order</button>
+        </div>
+
+    </div>
+
+</body>
+</html>

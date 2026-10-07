@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Gallery</title>
+    <style>
+        body {
+            font-family: Arial;
+            background-color: lightgray;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .gallery {
+            width: 80%;
+            margin: 30px auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 15px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .gallery img:hover {
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>My Image Gallery</h1>
+
+    <div class="gallery">
+        <img src="https://picsum.photos/300/200?1">
+        <img src="https://picsum.photos/300/200?2">
+        <img src="https://picsum.photos/300/200?3">
+        <img src="https://picsum.photos/300/200?4">
+        <img src="https://picsum.photos/300/200?5">
+        <img src="https://picsum.photos/300/200?6">
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pricing Card</title>
+    <style>
+        body {
+            font-family: Arial;
+            background-color: lightgray;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 50px;
+        }
+
+        .card {
+            width: 220px;
+            background-color: white;
+            padding: 25px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px gray;
+        }
+
+        .price {
+            font-size: 30px;
+            color: blue;
+            font-weight: bold;
+        }
+
+        button {
+            padding: 10px 25px;
+            background-color: blue;
+            color: white;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="card">
+            <h2>Basic</h2>
+            <p class="price">₹199</p>
+            <p>5 Projects</p>
+            <p>10 GB Storage</p>
+            <button>Choose</button>
+        </div>
+
+        <div class="card">
+            <h2>Pro</h2>
+            <p class="price">₹499</p>
+            <p>20 Projects</p>
+            <p>50 GB Storage</p>
+            <button>Choose</button>
+        </div>
+
+        <div class="card">
+            <h2>Premium</h2>
+            <p class="price">₹999</p>
+            <p>Unlimited Projects</p>
+            <p>100 GB Storage</p>
+            <button>Choose</button>
+        </div>
+
+    </div>
+
+</body>
+</html>

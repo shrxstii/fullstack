@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+            background-color: lightgray;
+        }
+
+        .dashboard {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        .sidebar {
+            width: 200px;
+            background-color: black;
+            color: white;
+            padding: 20px;
+        }
+
+        .sidebar h2 {
+            margin-bottom: 30px;
+        }
+
+        .sidebar p {
+            padding: 10px;
+        }
+
+        .main {
+            flex: 1;
+            padding: 30px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+        }
+
+        .card {
+            background-color: white;
+            padding: 25px;
+            box-shadow: 0 3px 8px gray;
+        }
+
+        .card h2 {
+            color: blue;
+        }
+
+        @media (max-width: 700px) {
+            .sidebar {
+                display: none;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="dashboard">
+
+        <div class="sidebar">
+            <h2>Dashboard</h2>
+            <p>Home</p>
+            <p>Students</p>
+            <p>Courses</p>
+            <p>Settings</p>
+        </div>
+
+        <div class="main">
+            <h1>Dashboard</h1>
+
+            <div class="cards">
+
+                <div class="card">
+                    <h2>120</h2>
+                    <p>Total Students</p>
+                </div>
+
+                <div class="card">
+                    <h2>15</h2>
+                    <p>Total Courses</p>
+                </div>
+
+                <div class="card">
+                    <h2>85%</h2>
+                    <p>Attendance</p>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f4f7;
+            color: #222;
+        }
+
+        .dashboard {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        .sidebar {
+            width: 190px;
+            background-color: #17243b;
+            color: white;
+            padding: 20px 15px;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+        .menu a {
+            display: block;
+            color: #d5d9e0;
+            text-decoration: none;
+            padding: 12px 10px;
+            margin-bottom: 8px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .menu a:hover,
+        .menu .active {
+            background-color: #334b76;
+            color: white;
+        }
+
+        .main {
+            flex: 1;
+            padding: 20px 25px;
+        }
+
+        .topbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .search {
+            width: 300px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .user {
+            font-size: 14px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            margin-bottom: 25px;
+        }
+
+        .card {
+            background-color: white;
+            padding: 18px;
+            border-radius: 8px;
+            box-shadow: 0 2px 7px #ddd;
+        }
+
+        .card p {
+            color: #777;
+            font-size: 12px;
+            margin-bottom: 8px;
+        }
+
+        .card h2 {
+            font-size: 23px;
+        }
+
+        .green {
+            border-top: 4px solid green;
+        }
+
+        .pink {
+            border-top: 4px solid #e83e8c;
+        }
+
+        .orange {
+            border-top: 4px solid orange;
+        }
+
+        .blue {
+            border-top: 4px solid #3478db;
+        }
+
+        .purple {
+            border-top: 4px solid purple;
+        }
+
+        .red {
+            border-top: 4px solid red;
+        }
+
+        .bottom {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .box {
+            background-color: white;
+            min-height: 190px;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 7px #ddd;
+        }
+
+        .box h3 {
+            font-size: 13px;
+            margin-bottom: 15px;
+        }
+
+        .graph {
+            height: 130px;
+            display: flex;
+            align-items: end;
+            justify-content: space-around;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .bar {
+            width: 22px;
+            background-color: #4385e5;
+        }
+
+        .bar1 {
+            height: 45px;
+        }
+
+        .bar2 {
+            height: 75px;
+        }
+
+        .bar3 {
+            height: 55px;
+        }
+
+        .bar4 {
+            height: 95px;
+        }
+
+        .bar5 {
+            height: 65px;
+        }
+
+        .bar6 {
+            height: 110px;
+        }
+
+        .line-chart {
+            height: 130px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .line-chart div {
+            width: 85%;
+            height: 70px;
+            border-top: 3px solid #42aaa0;
+            transform: skewY(-8deg);
+        }
+
+        .pie {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: conic-gradient(
+                orange 0deg 100deg,
+                #ddd 100deg 190deg,
+                #7aa7df 190deg 270deg,
+                #f08080 270deg 360deg
+            );
+            margin: 20px auto;
+        }
+
+        @media (max-width: 800px) {
+
+            .sidebar {
+                width: 150px;
+            }
+
+            .cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .bottom {
+                grid-template-columns: 1fr;
+            }
+
+            .search {
+                width: 200px;
+            }
+
+        }
+
+        @media (max-width: 550px) {
+
+            .dashboard {
+                display: block;
+            }
+
+            .sidebar {
+                width: 100%;
+                min-height: auto;
+            }
+
+            .menu {
+                display: flex;
+                gap: 5px;
+                overflow-x: auto;
+            }
+
+            .menu a {
+                white-space: nowrap;
+            }
+
+            .main {
+                padding: 15px;
+            }
+
+            .topbar {
+                gap: 10px;
+            }
+
+            .search {
+                width: 100%;
+            }
+
+            .user {
+                display: none;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .bottom {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <aside class="sidebar">
+
+            <div class="logo">
+                Admin
+            </div>
+
+            <div class="menu">
+
+                <a href="#" class="active">
+                    Dashboard
+                </a>
+
+                <a href="#">
+                    Messages
+                </a>
+
+                <a href="#">
+                    Analytics
+                </a>
+
+                <a href="#">
+                    Products
+                </a>
+
+                <a href="#">
+                    Users
+                </a>
+
+                <a href="#">
+                    Settings
+                </a>
+
+            </div>
+
+        </aside>
+
+        <main class="main">
+
+            <div class="topbar">
+
+                <input
+                    type="text"
+                    class="search"
+                    placeholder="Search"
+                >
+
+                <div class="user">
+                    Active &nbsp;&nbsp; 👤 User
+                </div>
+
+            </div>
+
+            <div class="cards">
+
+                <div class="card green">
+                    <p>TOTAL REVENUE</p>
+                    <h2>$3,249</h2>
+                </div>
+
+                <div class="card pink">
+                    <p>TOTAL USERS</p>
+                    <h2>249</h2>
+                </div>
+
+                <div class="card orange">
+                    <p>NEW USERS</p>
+                    <h2>2</h2>
+                </div>
+
+                <div class="card blue">
+                    <p>SERVICE UPTIME</p>
+                    <h2>152 days</h2>
+                </div>
+
+                <div class="card purple">
+                    <p>TO DO LIST</p>
+                    <h2>7 tasks</h2>
+                </div>
+
+                <div class="card red">
+                    <p>ISSUES</p>
+                    <h2>3</h2>
+                </div>
+
+            </div>
+
+            <div class="bottom">
+
+                <div class="box">
+
+                    <h3>GRAPH</h3>
+
+                    <div class="graph">
+
+                        <div class="bar bar1"></div>
+                        <div class="bar bar2"></div>
+                        <div class="bar bar3"></div>
+                        <div class="bar bar4"></div>
+                        <div class="bar bar5"></div>
+                        <div class="bar bar6"></div>
+
+                    </div>
+
+                </div>
+
+                <div class="box">
+
+                    <h3>GRAPH</h3>
+
+                    <div class="line-chart">
+                        <div></div>
+                    </div>
+
+                </div>
+
+                <div class="box">
+
+                    <h3>GRAPH</h3>
+
+                    <div class="pie"></div>
+
+                </div>
+
+                <div class="box">
+
+                    <h3>GRAPH</h3>
+
+                    <div class="graph">
+
+                        <div class="bar bar3"></div>
+                        <div class="bar bar1"></div>
+                        <div class="bar bar5"></div>
+                        <div class="bar bar2"></div>
+                        <div class="bar bar4"></div>
+
+                    </div>
+
+                </div>
+
+                <div class="box">
+
+                    <h3>GRAPH</h3>
+
+                    <div class="line-chart">
+                        <div></div>
+                    </div>
+
+                </div>
+
+                <div class="box">
+
+                    <h3>ADVERTISEMENT</h3>
+
+                    <p style="margin-top: 30px; text-align: center;">
+                        Your advertisement here
+                    </p>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login Page</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(120deg, #42d6d0, #8b3df0, #ed19c9);
+        }
+
+        .login-box {
+            width: 330px;
+            background-color: white;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .logo {
+            width: 55px;
+            height: 55px;
+            background-color: #111b52;
+            color: white;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 25px;
+            margin: -55px auto 20px;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 18px;
+            margin-bottom: 22px;
+        }
+
+        .input-box {
+            margin-bottom: 15px;
+        }
+
+        .input-box label {
+            display: block;
+            font-size: 11px;
+            color: #555;
+            margin-bottom: 6px;
+        }
+
+        .input-box input {
+            width: 100%;
+            padding: 9px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            outline: none;
+            font-size: 12px;
+        }
+
+        .input-box input:focus {
+            border-color: #9b45e8;
+        }
+
+        .options {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 10px;
+            margin-bottom: 18px;
+        }
+
+        .options a {
+            color: #8b3df0;
+            text-decoration: none;
+        }
+
+        .login-btn {
+            width: 100%;
+            border: none;
+            padding: 10px;
+            border-radius: 15px;
+            background: linear-gradient(90deg, #42d6d0, #d329dc);
+            color: white;
+            cursor: pointer;
+            font-size: 12px;
+        }
+
+        .login-btn:hover {
+            opacity: 0.9;
+        }
+
+        .or {
+            text-align: center;
+            color: #999;
+            font-size: 10px;
+            margin: 20px 0 12px;
+        }
+
+        .social {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .social button {
+            width: 30px;
+            height: 30px;
+            border: 1px solid #ddd;
+            border-radius: 50%;
+            background-color: white;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .bottom-text {
+            text-align: center;
+            margin-top: 22px;
+            font-size: 10px;
+            color: #777;
+        }
+
+        .bottom-text a {
+            color: #8b3df0;
+            text-decoration: none;
+        }
+
+        @media (max-width: 500px) {
+
+            .login-box {
+                width: 90%;
+                padding: 25px;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="login-box">
+
+        <div class="logo">
+            ♟
+        </div>
+
+        <h2>Login</h2>
+
+        <div class="input-box">
+            <label>Email</label>
+            <input type="email" placeholder="Enter your email">
+        </div>
+
+        <div class="input-box">
+            <label>Password</label>
+            <input type="password" placeholder="Enter your password">
+        </div>
+
+        <div class="options">
+            <label>
+                <input type="checkbox">
+                Remember me
+            </label>
+
+            <a href="#">Forgot Password?</a>
+        </div>
+
+        <button class="login-btn">
+            LOGIN
+        </button>
+
+        <div class="or">
+            OR LOGIN WITH
+        </div>
+
+        <div class="social">
+            <button>f</button>
+            <button>G</button>
+            <button>◎</button>
+        </div>
+
+        <p class="bottom-text">
+            Don't have an account?
+            <a href="#">Sign Up</a>
+        </p>
+
+    </div>
+
+</body>
+</html>

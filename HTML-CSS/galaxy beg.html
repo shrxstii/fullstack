@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Guardians of the Galaxy</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #080814;
+            color: white;
+        }
+
+        /* NAVBAR */
+
+        nav {
+            background-color: #111126;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav h2 {
+            color: #bcaeff;
+            letter-spacing: 2px;
+        }
+
+        /* HERO */
+
+        .hero {
+            height: 90vh;
+
+            background-image:
+                linear-gradient(
+                    rgba(0,0,0,0.55),
+                    rgba(0,0,0,0.75)
+                ),
+                url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDqvkH49Hn-mQhMUKPBbc9ttT7LvOLzjmE_L3ZCcMt-w&s=10");
+
+            background-size: cover;
+            background-position: center;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+        }
+
+        .hero-content {
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 60px;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .hero p {
+            max-width: 600px;
+            margin: auto;
+            color: #dddddd;
+            line-height: 1.7;
+        }
+
+        /* INTRO */
+
+        .intro {
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .intro h2 {
+            font-size: 40px;
+            margin-bottom: 20px;
+            color: #bcaeff;
+        }
+
+        .intro p {
+            max-width: 700px;
+            margin: auto;
+            line-height: 1.8;
+            color: #cccccc;
+        }
+
+        /* CHARACTERS */
+
+        .characters {
+            padding: 60px 8%;
+        }
+
+        .characters h2 {
+            text-align: center;
+            font-size: 40px;
+            margin-bottom: 50px;
+            color: #bcaeff;
+        }
+
+        .card-container {
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(250px, 1fr));
+
+            gap: 30px;
+        }
+
+        /* CARD */
+
+        .card {
+            background-color: #121226;
+
+            border-radius: 15px;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 10px 25px rgba(0,0,0,0.4);
+
+            transition: 0.4s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 220px;
+
+            object-fit: cover;
+
+            transition: 0.4s;
+        }
+
+        .card:hover img {
+            transform: scale(1.08);
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #ffffff;
+        }
+
+        .card p {
+            color: #bbbbbb;
+            line-height: 1.6;
+            font-size: 14px;
+        }
+
+        /* BUTTON */
+
+        .button {
+            display: inline-block;
+
+            margin-top: 20px;
+
+            padding: 10px 20px;
+
+            border: 1px solid #8f7dff;
+
+            color: #bcaeff;
+
+            text-decoration: none;
+
+            border-radius: 20px;
+
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            background-color: #8f7dff;
+            color: white;
+        }
+
+        /* FOOTER */
+
+        footer {
+            margin-top: 70px;
+
+            padding: 50px 20px;
+
+            text-align: center;
+
+            background-color: #111126;
+
+            color: #aaaaaa;
+        }
+
+        footer h2 {
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        /* MOBILE */
+
+        @media(max-width:600px) {
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .intro h2,
+            .characters h2 {
+                font-size: 30px;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- NAVBAR -->
+
+    <nav>
+        <h2>GUARDIANS OF THE GALAXY</h2>
+    </nav>
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h1>
+                GUARDIANS<br>
+                OF THE GALAXY
+            </h1>
+
+            <p>
+                A group of unlikely heroes who come together
+                to protect the galaxy and become a family.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- INTRODUCTION -->
+
+    <section class="intro">
+
+        <h2>
+            Meet the Guardians
+        </h2>
+
+        <p>
+            From different worlds and different backgrounds,
+            these heroes join together to face the greatest
+            threats in the galaxy. Their friendship,
+            courage and teamwork make them a legendary team.
+        </p>
+
+    </section>
+
+
+    <!-- CHARACTERS -->
+
+    <section class="characters">
+
+        <h2>
+            Our Heroes
+        </h2>
+
+
+        <div class="card-container">
+
+
+            <!-- PETER -->
+
+            <div class="card">
+
+                <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEJKKx8sGE55XkEduQh6HMDzTPjgcaZ-h_0UhS44VOno-oIFozy8MPHoY&s=10"
+                    alt="Peter Quill"
+                >
+
+                <div class="card-content">
+
+                    <h3>
+                        Peter Quill
+                    </h3>
+
+                    <p>
+                        Hybrid leader and music enthusiast,
+                        also known as Star-Lord.
+                    </p>
+
+                    <a href="#" class="button">
+                        Explore
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- GAMORA -->
+
+            <div class="card">
+
+                <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqTmb63rhnk7QstAkJymIZVXc1uVnceDxLW5Ll1KSxQQ&s=10"
+                    alt="Gamora"
+                >
+
+                <div class="card-content">
+
+                    <h3>
+                        Gamora
+                    </h3>
+
+                    <p>
+                        A deadly warrior and adopted daughter
+                        of Thanos.
+                    </p>
+
+                    <a href="#" class="button">
+                        Explore
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- DRAX -->
+
+            <div class="card">
+
+                <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVMzKOw4kFgAJJQuzTatNIDi6eEZPni7_MZzwT0h5M8g&s=10"
+                    alt="Drax"
+                >
+
+                <div class="card-content">
+
+                    <h3>
+                        Drax
+                    </h3>
+
+                    <p>
+                        A powerful fighter seeking vengeance
+                        for his family.
+                    </p>
+
+                    <a href="#" class="button">
+                        Explore
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- ROCKET -->
+
+            <div class="card">
+
+                <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4B-aeNVvvelalLJJdqvOr-rwySo3jk1tN4dqvbu_sPg&s=10"
+                    alt="Rocket"
+                >
+
+                <div class="card-content">
+
+                    <h3>
+                        Rocket
+                    </h3>
+
+                    <p>
+                        A genetically modified tactical
+                        strategist and inventor.
+                    </p>
+
+                    <a href="#" class="button">
+                        Explore
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- GROOT -->
+
+            <div class="card">
+
+                <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTCFl7558Hw6WFE0RmXW71yV5jHUH6XL7_uFZnILZwrTKMi09NI39vVhav&s=10"
+                    alt="Groot"
+                >
+
+                <div class="card-content">
+
+                    <h3>
+                        Groot
+                    </h3>
+
+                    <p>
+                        A sentient flora and Rocket's
+                        loyal companion.
+                    </p>
+
+                    <a href="#" class="button">
+                        Explore
+                    </a>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <h2>
+            WE ARE GROOT
+        </h2>
+
+        <p>
+            Guardians of the Galaxy
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

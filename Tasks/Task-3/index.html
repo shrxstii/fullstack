@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AdminPro - Analytics Dashboard</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <aside class="sidebar">
+
+            <div class="brand">
+                <span class="brand-icon">A</span>
+                AdminPro
+            </div>
+
+            <nav>
+
+                <a href="#" class="active">
+                    <span>▣</span>
+                    Dashboard
+                </a>
+
+                <a href="#">
+                    <span>⌁</span>
+                    Analytics
+                </a>
+
+                <a href="#">
+                    <span>♙</span>
+                    Users
+                </a>
+
+                <a href="#">
+                    <span>▤</span>
+                    Orders
+                </a>
+
+                <a href="#">
+                    <span>▣</span>
+                    Products
+                </a>
+
+                <a href="#">
+                    <span>⚙</span>
+                    Settings
+                </a>
+
+            </nav>
+
+            <div class="admin-profile">
+                <div class="avatar">AT</div>
+
+                <div>
+                    <strong>Ayush Tiwari</strong>
+                    <small>Admin</small>
+                </div>
+            </div>
+
+        </aside>
+
+
+        <div class="main">
+
+            <header class="header">
+
+                <button class="hamburger">☰</button>
+
+                <div class="search">
+                    <span>⌕</span>
+                    <input type="text" placeholder="Search...">
+                </div>
+
+                <div class="header-right">
+                    <span class="notification">♧</span>
+                    <div class="header-avatar">A</div>
+                </div>
+
+            </header>
+
+
+            <main class="content">
+
+                <div class="page-heading">
+                    <div>
+                        <h1>Dashboard</h1>
+                        <p>Welcome back! Here's what's happening today.</p>
+                    </div>
+
+                    <button class="date-btn">This Month ▾</button>
+                </div>
+
+
+                <section class="kpi-grid">
+
+                    <div class="kpi-card">
+                        <div class="kpi-top">
+                            <div class="kpi-icon green-icon">₹</div>
+                            <span class="trend green">↗</span>
+                        </div>
+
+                        <p>Total Revenue</p>
+                        <h2>₹1,24,532</h2>
+                        <small class="green">↑ 12% from last month</small>
+                    </div>
+
+
+                    <div class="kpi-card">
+                        <div class="kpi-top">
+                            <div class="kpi-icon blue-icon">▣</div>
+                            <span class="trend green">↗</span>
+                        </div>
+
+                        <p>Total Orders</p>
+                        <h2>892</h2>
+                        <small class="green">↑ 8% from last month</small>
+                    </div>
+
+
+                    <div class="kpi-card">
+                        <div class="kpi-top">
+                            <div class="kpi-icon purple-icon">♙</div>
+                            <span class="trend green">↗</span>
+                        </div>
+
+                        <p>Active Users</p>
+                        <h2>3,521</h2>
+                        <small class="green">↑ 14% from last month</small>
+                    </div>
+
+
+                    <div class="kpi-card">
+                        <div class="kpi-top">
+                            <div class="kpi-icon orange-icon">◇</div>
+                            <span class="trend green">↗</span>
+                        </div>
+
+                        <p>Conversion Rate</p>
+                        <h2>4.2%</h2>
+                        <small class="green">↑ 2% from last month</small>
+                    </div>
+
+                </section>
+
+
+                <section class="top-analytics">
+
+                    <div class="card revenue-card">
+
+                        <div class="card-header">
+                            <h3>Revenue Overview</h3>
+                            <strong>₹1,24,532</strong>
+                        </div>
+
+                        <div class="chart-area">
+
+                            <div class="y-axis">
+                                <span>₹1L</span>
+                                <span>₹75K</span>
+                                <span>₹50K</span>
+                                <span>₹25K</span>
+                                <span>₹0</span>
+                            </div>
+
+                            <div class="chart">
+
+                                <div class="line line1"></div>
+                                <div class="line line2"></div>
+                                <div class="line line3"></div>
+                                <div class="line line4"></div>
+
+                                <svg viewBox="0 0 600 230" preserveAspectRatio="none">
+
+                                    <path
+                                        d="M0 180
+                                        L60 190
+                                        L120 160
+                                        L180 175
+                                        L240 125
+                                        L300 145
+                                        L360 105
+                                        L420 120
+                                        L480 75
+                                        L540 92
+                                        L600 45
+                                        L600 230
+                                        L0 230 Z"
+                                        fill="#eef2ff">
+                                    </path>
+
+                                    <path
+                                        d="M0 180
+                                        L60 190
+                                        L120 160
+                                        L180 175
+                                        L240 125
+                                        L300 145
+                                        L360 105
+                                        L420 120
+                                        L480 75
+                                        L540 92
+                                        L600 45"
+                                        fill="none"
+                                        stroke="#4f46e5"
+                                        stroke-width="4">
+                                    </path>
+
+                                    <circle cx="0" cy="180" r="5" fill="#4f46e5"/>
+                                    <circle cx="120" cy="160" r="5" fill="#4f46e5"/>
+                                    <circle cx="240" cy="125" r="5" fill="#4f46e5"/>
+                                    <circle cx="360" cy="105" r="5" fill="#4f46e5"/>
+                                    <circle cx="480" cy="75" r="5" fill="#4f46e5"/>
+                                    <circle cx="600" cy="45" r="5" fill="#4f46e5"/>
+
+                                </svg>
+
+                                <div class="months">
+                                    <span>Jan</span>
+                                    <span>Feb</span>
+                                    <span>Mar</span>
+                                    <span>Apr</span>
+                                    <span>May</span>
+                                    <span>Jun</span>
+                                    <span>Jul</span>
+                                    <span>Aug</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="card orders-card">
+
+                        <div class="card-header">
+                            <h3>Recent Orders</h3>
+                            <a href="#">View all →</a>
+                        </div>
+
+                        <div class="table-wrapper">
+
+                            <table>
+
+                                <thead>
+                                    <tr>
+                                        <th>Customer</th>
+                                        <th>Amount</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+
+                                    <tr>
+                                        <td>Riya Sharma</td>
+                                        <td>₹2,499</td>
+                                        <td><span class="status delivered">Delivered</span></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Priya Singh</td>
+                                        <td>₹4,099</td>
+                                        <td><span class="status processing">Processing</span></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Amit Kumar</td>
+                                        <td>₹1,299</td>
+                                        <td><span class="status shipped">Shipped</span></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Neha Gupta</td>
+                                        <td>₹799</td>
+                                        <td><span class="status delivered">Delivered</span></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Sahil Verma</td>
+                                        <td>₹5,499</td>
+                                        <td><span class="status cancelled">Cancelled</span></td>
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <section class="bottom-analytics">
+
+                    <div class="card traffic-card">
+
+                        <div class="card-header">
+                            <h3>Traffic Overview</h3>
+                            <span class="green">↑ 18%</span>
+                        </div>
+
+                        <h4>8,432</h4>
+                        <p>Total Visitors</p>
+
+                        <div class="bar-chart">
+
+                            <div class="bar" style="height: 38%;"></div>
+                            <div class="bar" style="height: 55%;"></div>
+                            <div class="bar" style="height: 47%;"></div>
+                            <div class="bar" style="height: 68%;"></div>
+                            <div class="bar" style="height: 60%;"></div>
+                            <div class="bar" style="height: 82%;"></div>
+                            <div class="bar" style="height: 100%;"></div>
+
+                        </div>
+
+                        <div class="days">
+                            <span>Mon</span>
+                            <span>Tue</span>
+                            <span>Wed</span>
+                            <span>Thu</span>
+                            <span>Fri</span>
+                            <span>Sat</span>
+                            <span>Sun</span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="card products-card">
+
+                        <div class="card-header">
+                            <h3>Top Products</h3>
+                        </div>
+
+                        <div class="product-row">
+                            <span>Laptop Pro</span>
+                            <strong>2,450</strong>
+                            <small class="green">+12%</small>
+                        </div>
+
+                        <div class="product-row">
+                            <span>Wireless Earbuds</span>
+                            <strong>1,992</strong>
+                            <small class="green">+8%</small>
+                        </div>
+
+                        <div class="product-row">
+                            <span>Smart Watch</span>
+                            <strong>1,203</strong>
+                            <small class="green">+6%</small>
+                        </div>
+
+                        <div class="product-row">
+                            <span>Backpack</span>
+                            <strong>982</strong>
+                            <small class="green">+4%</small>
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </main>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

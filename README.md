@@ -47,7 +47,7 @@ Full Stack
 │   ├── Task-3
 │   └── Task-4
 │
-├── CSS
-│   └── CSS Practice
+├── HTML-CSS
+│   └── HTML & CSS Practice
 │
 └── Other Practice Work

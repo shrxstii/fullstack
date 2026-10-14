@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dark Mode</title>
+
+    <style>
+        body {
+            text-align: center;
+            margin-top: 200px;
+            transition: 0.5s;
+        }
+
+        body:has(input:checked) {
+            background-color: black;
+        }
+
+        label {
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        input:checked ~ label {
+            color: white;
+        }
+
+        input {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
+
+        h1 {
+            font-size: 40px;
+        }
+
+        body:has(input:checked) h1 {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Welcome </h1>
+
+    <input type="checkbox" id="toggle">
+
+    <label for="toggle">Dark Mode</label>
+
+</body>
+</html>

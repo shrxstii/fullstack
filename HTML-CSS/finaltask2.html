@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>E-Commerce Product Listing</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .product:hover {
+            box-shadow: 0 4px 12px #ddd;
+        }
+
+        .product img:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body class="bg-[#F8FAFC] text-[#6B7280]">
+
+  
+    <header class="bg-white p-4 border-b">
+        <div class="max-w-[1200px] mx-auto flex justify-between items-center">
+
+            <h1 class="text-2xl font-bold text-[#111827]">
+                ShopKart
+            </h1>
+
+            <input
+                type="text"
+                placeholder="Search for products..."
+                class="hidden sm:block border p-2 rounded w-[300px]"
+            >
+
+            <div class="flex gap-4 text-xl">
+                🛒 👤
+            </div>
+
+        </div>
+    </header>
+
+
+    <!-- Main -->
+    <main class="max-w-[1200px] mx-auto p-6">
+
+        <div class="flex gap-8">
+
+            <!-- Sidebar -->
+            <aside class="w-[240px] bg-white p-4 border rounded-lg h-fit hidden md:block">
+
+                <h2 class="text-[16px] font-semibold text-[#111827]">
+                    Filters
+                </h2>
+
+                <h3 class="font-semibold mt-5 text-[#111827]">
+                    Category
+                </h3>
+
+                <label class="block mt-2">
+                    <input type="checkbox"> Laptops
+                </label>
+
+                <label class="block mt-2">
+                    <input type="checkbox"> Mobiles
+                </label>
+
+                <label class="block mt-2">
+                    <input type="checkbox"> Tablets
+                </label>
+
+                <h3 class="font-semibold mt-5 text-[#111827]">
+                    Price Range
+                </h3>
+
+                <label class="block mt-2">
+                    <input type="checkbox"> ₹10,000 - ₹30,000
+                </label>
+
+                <label class="block mt-2">
+                    <input type="checkbox"> ₹30,000 - ₹50,000
+                </label>
+
+                <label class="block mt-2">
+                    <input type="checkbox"> ₹50,000+
+                </label>
+
+                <button class="mt-6 bg-[#2563EB] text-white px-4 py-2 rounded">
+                    Apply Filters
+                </button>
+
+            </aside>
+
+
+            <!-- Products -->
+            <section class="flex-1">
+
+                <!-- Mobile Filter -->
+                <div class="md:hidden mb-4">
+                    <button class="bg-[#2563EB] text-white px-4 py-2 rounded">
+                        Filters
+                    </button>
+                </div>
+
+
+                <div class="flex justify-between items-center mb-5">
+
+                    <h2 class="text-[#111827] font-semibold">
+                        Products
+                    </h2>
+
+                    <select class="border p-2 rounded">
+                        <option>Sort by</option>
+                        <option>Price</option>
+                        <option>Rating</option>
+                    </select>
+
+                </div>
+
+
+                <!-- Product Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+
+
+                    <!-- Product 1 -->
+                    <div class="product bg-white border rounded-xl p-4">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=400"
+                            class="w-full h-[160px] object-contain transition"
+                        >
+
+                        <p class="text-[13px] mt-3">
+                            Laptop
+                        </p>
+
+                        <h3 class="text-[16px] font-semibold text-[#111827]">
+                            Dell Inspiron 15
+                        </h3>
+
+                        <div class="mt-2">
+                            <span class="text-[20px] font-bold text-[#111827]">
+                                ₹45,000
+                            </span>
+
+                            <span class="text-[14px] line-through ml-2">
+                                ₹50,000
+                            </span>
+                        </div>
+
+                        <p class="text-[#F59E0B] mt-2">
+                            ★★★★☆ 4.3
+                        </p>
+
+                        <button class="w-full bg-[#2563EB] text-white py-2 mt-3 rounded">
+                            Add to Cart
+                        </button>
+
+                    </div>
+
+
+                    <!-- Product 2 -->
+                    <div class="product bg-white border rounded-xl p-4">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=400"
+                            class="w-full h-[160px] object-contain transition"
+                        >
+
+                        <p class="text-[13px] mt-3">
+                            Laptop
+                        </p>
+
+                        <h3 class="text-[16px] font-semibold text-[#111827]">
+                            HP Pavilion
+                        </h3>
+
+                        <div class="mt-2">
+                            <span class="text-[20px] font-bold text-[#111827]">
+                                ₹52,990
+                            </span>
+
+                            <span class="text-[14px] line-through ml-2">
+                                ₹58,000
+                            </span>
+                        </div>
+
+                        <p class="text-[#F59E0B] mt-2">
+                            ★★★★☆ 4.5
+                        </p>
+
+                        <button class="w-full bg-[#2563EB] text-white py-2 mt-3 rounded">
+                            Add to Cart
+                        </button>
+
+                    </div>
+
+
+                    <!-- Product 3 -->
+                    <div class="product bg-white border rounded-xl p-4">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=400"
+                            class="w-full h-[160px] object-contain transition"
+                        >
+
+                        <p class="text-[13px] mt-3">
+                            Laptop
+                        </p>
+
+                        <h3 class="text-[16px] font-semibold text-[#111827]">
+                            Lenovo IdeaPad
+                        </h3>
+
+                        <div class="mt-2">
+                            <span class="text-[20px] font-bold text-[#111827]">
+                                ₹40,000
+                            </span>
+
+                            <span class="text-[14px] line-through ml-2">
+                                ₹46,000
+                            </span>
+                        </div>
+
+                        <p class="text-[#F59E0B] mt-2">
+                            ★★★★☆ 4.2
+                        </p>
+
+                        <button class="w-full bg-[#2563EB] text-white py-2 mt-3 rounded">
+                            Add to Cart
+                        </button>
+
+                    </div>
+
+
+                    <!-- Product 4 -->
+                    <div class="product bg-white border rounded-xl p-4">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=400"
+                            class="w-full h-[160px] object-contain transition"
+                        >
+
+                        <p class="text-[13px] mt-3">
+                            Laptop
+                        </p>
+
+                        <h3 class="text-[16px] font-semibold text-[#111827]">
+                            ASUS VivoBook
+                        </h3>
+
+                        <div class="mt-2">
+                            <span class="text-[20px] font-bold text-[#111827]">
+                                ₹41,990
+                            </span>
+
+                            <span class="text-[14px] line-through ml-2">
+                                ₹48,000
+                            </span>
+                        </div>
+
+                        <p class="text-[#F59E0B] mt-2">
+                            ★★★★★ 4.7
+                        </p>
+
+                        <button class="w-full bg-[#2563EB] text-white py-2 mt-3 rounded">
+                            Add to Cart
+                        </button>
+
+                    </div>
+
+
+                    <!-- Product 5 -->
+                    <div class="product bg-white border rounded-xl p-4">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1517336714739-489689fd1ca8?w=400"
+                            class="w-full h-[160px] object-contain transition"
+                        >
+
+                        <p class="text-[13px] mt-3">
+                            Laptop
+                        </p>
+
+                        <h3 class="text-[16px] font-semibold text-[#111827]">
+                            MacBook Air
+                        </h3>
+
+                        <div class="mt-2">
+                            <span class="text-[20px] font-bold text-[#111827]">
+                                ₹90,000
+                            </span>
+
+                            <span class="text-[14px] line-through ml-2">
+                                ₹95,000
+                            </span>
+                        </div>
+
+                        <p class="text-[#F59E0B] mt-2">
+                            ★★★★★ 4.8
+                        </p>
+
+                        <button class="w-full bg-[#2563EB] text-white py-2 mt-3 rounded">
+                            Add to Cart
+                        </button>
+
+                    </div>
+
+
+                    <!-- Product 6 -->
+                    <div class="product bg-white border rounded-xl p-4">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=400"
+                            class="w-full h-[160px] object-contain transition"
+                        >
+
+                        <p class="text-[13px] mt-3">
+                            Laptop
+                        </p>
+
+                        <h3 class="text-[16px] font-semibold text-[#111827]">
+                            Dell XPS 13
+                        </h3>
+
+                        <div class="mt-2">
+                            <span class="text-[20px] font-bold text-[#111827]">
+                                ₹89,000
+                            </span>
+
+                            <span class="text-[14px] line-through ml-2">
+                                ₹95,000
+                            </span>
+                        </div>
+
+                        <p class="text-[#F59E0B] mt-2">
+                            ★★★★☆ 4.4
+                        </p>
+
+                        <button class="w-full bg-[#2563EB] text-white py-2 mt-3 rounded">
+                            Add to Cart
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+</body>
+</html>

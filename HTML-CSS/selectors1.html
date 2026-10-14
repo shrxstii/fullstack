@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*psuedo classes*/
+        input{
+            border-width: 0px 0px 2px 0px;
+            margin:3%;
+        }
+        input:focus{
+            outline:0px;
+            box-shadow:3px 5px 5px grey;
+        }
+        input:required{
+            border-color:red;
+        }
+        input:optional{
+            border-color:green;
+        }
+        input:disabled{
+            border-width: 0px;
+            background:grey;
+            color:white;
+        }
+        input:enabled{
+            font-family:Montana;
+        }
+        input:in-range{
+            font-weight:900;
+        }
+        input:out-of-range{
+            color:red;
+        }
+        input:valid{
+            color:green;
+        }
+        input:invalid{
+            color:red;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <input type="text" placeholder="First Name" required></br>
+        <input type="text" placeholder="MiddleName"></br>
+        <input type="text" placeholder="Last Name" required></br>
+        <input type="text" value="Mathura" disabled></br>
+        <input type="number" min="10" max="100"></br>
+        <input type="email" placeholder="Email"></br>
+        
+    </form>
+    
+</body>
+</html>

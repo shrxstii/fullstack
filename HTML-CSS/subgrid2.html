@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent{
+            height: 500px;
+            width: 500px;
+            display: grid;
+            grid-template-columns:1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            outline: 1px solid black;
+        }
+        #child{
+            display: grid;
+            outline: 1px dashed grey;
+            grid-template-columns: subgrid;
+            grid-column: 1/3;
+            background-color: yellow;
+        }
+        #subchild{
+            background-color:green;
+            grid-column: 2/3;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div id="child">
+            <div id="subchild">1</div>
+        </div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,69 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slideshow</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: lightgray;
+        }
+
+        .slideshow {
+            width: 600px;
+            height: 400px;
+            overflow: hidden;
+            border: 5px solid black;
+        }
+
+        .slideshow img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="slideshow">
+        <img id="slide" src="https://images.unsplash.com/photo-1506744038136-46273834b3fb">
+    </div>
+
+    <script>
+        let images = [
+            "https://images.unsplash.com/photo-1506744038136-46273834b3fb",
+            "https://images.unsplash.com/photo-1500534623283-312aade485b7",
+            "https://images.unsplash.com/photo-1470770841072-f978cf4d019e"
+        ];
+
+        let index = 0;
+
+        function changeSlide() {
+            index++;
+
+            if (index >= images.length) {
+                index = 0;
+            }
+
+            document.getElementById("slide").src = images[index];
+        }
+
+        setInterval(changeSlide, 2000);
+    </script>
+
+</body>
+</html>
+```

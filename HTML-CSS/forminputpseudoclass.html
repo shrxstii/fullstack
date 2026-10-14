@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button:focus{
+            background-color:yellow;
+        }
+        input{
+            border-width: 0px 0px 2px 0px;
+            margin:3%
+        }
+        input:placeholder-shown{
+            border-color:red!important;
+            font-size:25px;
+        }
+        input:focus{
+            outline:0px ;
+            box-shadow: 0 5px 5px grey;
+        }
+        input:required{
+            border-color:red;
+        }
+        input:optional{
+            border-color:blue;
+        }
+        input:disabled{
+            border-width:0px;
+            background:red;
+            color:white;
+        }
+        input:enabled{
+            font-family:Montana;
+        }
+        input:in-range{
+            font-weight:900;
+        }
+        input:out-of-range{
+            color:red;
+        }
+        input:valid{
+            color:green;
+        }
+        input:invalid{
+            color:red;
+        }
+
+        
+
+    </style>
+</head>
+<body>
+    <form>
+        <button>click me!</button><br>
+    <input type ="text" placeholder="first name" required/><br>
+    <input type="text" placeholder="middle name"/><br>
+    <input type="text" placeholder ="lastname" required/><br>
+    <input type="date"/><br>
+    <input type = "text" value="Agra" disabled/><br>
+    <input type="number" min="10" max="100"/><br>
+    <input type="email" placeholder="Email"/><br>
+    <input type="text" value="helllloooo" readonly/>
+
+    </form>
+</body>
+</html>

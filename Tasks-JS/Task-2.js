@@ -1,4 +1,4 @@
-// Simple Profile Generator using Template Literals
+// Simple Profile Generator : Combine firstName, favorite number, and isStudent variable into a single sentence using Template Literals
 
 let firstName = "Shristi";
 let favoriteNumber = 7;

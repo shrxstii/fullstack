@@ -1,4 +1,4 @@
-//Traffic Light Simulator in JavaScript, using `if...else` statements to control whether traffic should stop, slow down, or go based on the light color variable, in the same simple format as Task 2.
+//Traffic Light Simulator in JavaScript, using `if...else` statements to control whether traffic should stop, slow down, or go based on the light color variable.
 
 
 

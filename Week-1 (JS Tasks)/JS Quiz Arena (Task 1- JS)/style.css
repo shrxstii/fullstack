@@ -145,5 +145,32 @@ h1 {
     margin-top: 15px;
 }
 
+#review {
+    margin-top: 20px;
+}
+
+.review-item {
+    padding: 12px;
+    margin: 12px 0;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    background-color: #f9f9ff;
+}
+
+.review-item p {
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+.review-item p:nth-child(2) {
+    color: #dc3545;
+}
+
+.review-item p:nth-child(3) {
+    color: #218838;
+    font-weight: bold;
+}
+
+
 
 

@@ -47,6 +47,7 @@ let score = 0;
 let answered = false;
 let timeLeft = 30;
 let timerInterval = null;
+let wrongAnswers = [];
 
 function stopTimer() {
     if (timerInterval !== null) {
@@ -122,6 +123,15 @@ function handleAnswer(selectedOption, timedOut) {
     const q = questions[currentQuestion];
     const options = document.querySelectorAll(".option");
 
+    if (selectedOption !== q.answer) {
+        wrongAnswers.push({
+            question: q.question,
+            selected: timedOut ? "Not answered (Time out)" : selectedOption,
+            answer: q.answer,
+            explanation: q.explanation
+        });
+    }
+
     options.forEach(function(button) {
         button.disabled = true;
 
@@ -146,8 +156,7 @@ function handleAnswer(selectedOption, timedOut) {
     } else if (selectedOption === q.answer) {
         score++;
 
-        feedback.innerText =
-            "Correct! " + q.explanation;
+        feedback.innerText = "Correct! " + q.explanation;
         feedback.style.color = "green";
     } else {
         feedback.innerText =
@@ -188,12 +197,8 @@ function showResult() {
     document.getElementById("progress").innerText =
         "Quiz Completed!";
 
-    document.getElementById("timer").innerText =
-        "Time: 0s";
-
-    document.getElementById("question").innerText =
-        "Your Final Result";
-
+    document.getElementById("timer").innerText = "Time: 0s";
+    document.getElementById("question").innerText = "Your Final Result";
     document.getElementById("options").innerHTML = "";
 
     document.getElementById("feedback")?.remove();
@@ -215,6 +220,8 @@ function showResult() {
 
     document.getElementById("score").after(resultMessage);
 
+    showReview();
+
     const restartButton = document.createElement("button");
     restartButton.id = "restartBtn";
     restartButton.className = "next-btn";
@@ -224,10 +231,49 @@ function showResult() {
         currentQuestion = 0;
         score = 0;
         timeLeft = 30;
+        wrongAnswers = [];
+
         showQuestion();
     });
 
-    resultMessage.after(restartButton);
+    document.getElementById("review").after(restartButton);
+}
+
+function showReview() {
+    const review = document.getElementById("review");
+    review.innerHTML = "";
+    review.style.display = "block";
+
+    const heading = document.createElement("h3");
+    heading.innerText = "Review Wrong Answers";
+    review.appendChild(heading);
+
+    if (wrongAnswers.length === 0) {
+        const message = document.createElement("p");
+        message.innerText = "Perfect! You answered every question correctly.";
+        review.appendChild(message);
+        return;
+    }
+
+    wrongAnswers.forEach(function(item, index) {
+        const card = document.createElement("div");
+        card.className = "review-item";
+
+        const question = document.createElement("p");
+        question.innerText = `${index + 1}. ${item.question}`;
+
+        const selected = document.createElement("p");
+        selected.innerText = `Your answer: ${item.selected}`;
+
+        const correct = document.createElement("p");
+        correct.innerText = `Correct answer: ${item.answer}`;
+
+        const explanation = document.createElement("p");
+        explanation.innerText = `Explanation: ${item.explanation}`;
+
+        card.append(question, selected, correct, explanation);
+        review.appendChild(card);
+    });
 }
 
 showQuestion();

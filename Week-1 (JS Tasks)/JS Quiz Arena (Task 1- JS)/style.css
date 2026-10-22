@@ -56,3 +56,24 @@ h1 {
     color: #333333;
     margin-top: 20px;
 }
+
+.option.correct {
+    background-color: #c8f7c5;
+    border-color: #28a745;
+}
+
+.option.wrong {
+    background-color: #ffcaca;
+    border-color: #dc3545;
+}
+
+.option:disabled {
+    cursor: not-allowed;
+    opacity: 1;
+}
+
+#feedback {
+    line-height: 1.5;
+    font-weight: bold;
+}
+

@@ -21,7 +21,7 @@ const questions = [
             "selectId()"
         ],
         answer: "getElementById()",
-        explanation: "getElementById() selects an HTML element using its ID."
+        explanation: "It selects an HTML element using its ID."
     },
     {
         question: "Which operator checks strict equality?",
@@ -60,10 +60,10 @@ function showQuestion() {
     const optionsDiv = document.getElementById("options");
     optionsDiv.innerHTML = "";
 
-    const oldFeedback = document.getElementById("feedback");
-    if (oldFeedback) {
-        oldFeedback.remove();
-    }
+    document.getElementById("feedback")?.remove();
+
+    const oldNextButton = document.getElementById("nextBtn");
+    if (oldNextButton) oldNextButton.remove();
 
     q.options.forEach(function(option) {
         const button = document.createElement("button");
@@ -76,9 +76,7 @@ function showQuestion() {
 
             answered = true;
 
-            const allOptions = document.querySelectorAll(".option");
-
-            allOptions.forEach(function(btn) {
+            document.querySelectorAll(".option").forEach(function(btn) {
                 btn.disabled = true;
 
                 if (btn.innerText === q.answer) {
@@ -105,10 +103,68 @@ function showQuestion() {
                 `Score: ${score}`;
 
             optionsDiv.after(feedback);
+
+            const nextButton = document.createElement("button");
+            nextButton.id = "nextBtn";
+            nextButton.className = "next-btn";
+
+            nextButton.innerText =
+                currentQuestion === questions.length - 1
+                    ? "Finish Quiz"
+                    : "Next Question";
+
+            nextButton.addEventListener("click", function() {
+                if (currentQuestion < questions.length - 1) {
+                    currentQuestion++;
+                    showQuestion();
+                } else {
+                    showResult();
+                }
+            });
+
+            feedback.after(nextButton);
         });
 
         optionsDiv.appendChild(button);
     });
+}
+
+function showResult() {
+    document.getElementById("progress").innerText = "Quiz Completed!";
+    document.getElementById("question").innerText = "Your Final Result";
+    document.getElementById("options").innerHTML = "";
+
+    document.getElementById("feedback")?.remove();
+    document.getElementById("nextBtn")?.remove();
+
+    document.getElementById("score").innerText =
+        `Final Score: ${score}/${questions.length}`;
+
+    const resultMessage = document.createElement("p");
+    resultMessage.id = "feedback";
+
+    if (score === questions.length) {
+        resultMessage.innerText = "Excellent! Perfect score!";
+    } else if (score >= 3) {
+        resultMessage.innerText = "Good job! Keep practising.";
+    } else {
+        resultMessage.innerText = "Keep learning and try again!";
+    }
+
+    document.getElementById("score").after(resultMessage);
+
+    const restartButton = document.createElement("button");
+    restartButton.id = "restartBtn";
+    restartButton.className = "next-btn";
+    restartButton.innerText = "Restart Quiz";
+
+    restartButton.addEventListener("click", function() {
+        currentQuestion = 0;
+        score = 0;
+        showQuestion();
+    });
+
+    resultMessage.after(restartButton);
 }
 
 showQuestion();

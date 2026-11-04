@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Whack A Mole Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Whack A Mole!</h1>
+        <p class="subtitle">Catch the mole before time runs out!</p>
+
+        <div class="score-box">
+
+            <div>
+                <h3>SCORE</h3>
+                <p id="score">0</p>
+            </div>
+
+            <div>
+                <h3>TIME</h3>
+                <p id="timer">30</p>
+            </div>
+
+        </div>
+
+        <div class="game-grid" id="gameGrid">
+
+            <div class="hole" data-index="0"></div>
+            <div class="hole" data-index="1"></div>
+            <div class="hole" data-index="2"></div>
+            <div class="hole" data-index="3"></div>
+            <div class="hole" data-index="4"></div>
+            <div class="hole" data-index="5"></div>
+            <div class="hole" data-index="6"></div>
+            <div class="hole" data-index="7"></div>
+            <div class="hole" data-index="8"></div>
+
+        </div>
+
+        <h2 id="message">Ready to Play?</h2>
+
+        <button id="startBtn">Start Game</button>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

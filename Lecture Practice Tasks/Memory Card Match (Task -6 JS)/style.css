@@ -1,0 +1,101 @@
+
+body {
+    background-color: #fff1e6;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 500px;
+    margin: 30px auto;
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+h1 {
+    color: #703b25;
+    font-size: 28px;
+}
+
+.subtitle {
+    color: #777;
+    font-size: 15px;
+}
+
+.score-box {
+    display: flex;
+    justify-content: space-around;
+    background-color: #ffe0cc;
+    padding: 10px;
+    margin: 20px 0;
+    border-radius: 6px;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    max-width: 350px;
+    margin: 20px auto;
+}
+
+.card {
+    height: 75px;
+    background-color: #b85c38;
+    color: white;
+    font-size: 30px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.card:hover {
+    background-color: #914326;
+}
+
+.card.flipped {
+    background-color: #ffe0cc;
+    color: #333;
+}
+
+.card.matched {
+    background-color: #b7d7a8;
+    color: #333;
+    cursor: default;
+}
+
+#message {
+    color: #47823c;
+    font-weight: bold;
+    margin: 15px;
+}
+
+#restart {
+    background-color: #703b25;
+    color: white;
+    padding: 11px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+#restart:hover {
+    background-color: #914326;
+}
+
+@media (max-width: 400px) {
+    .card {
+        height: 65px;
+        font-size: 25px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+}

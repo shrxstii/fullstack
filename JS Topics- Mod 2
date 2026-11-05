@@ -1,0 +1,19 @@
+Execution Context
+Call Stack
+Memory vs Code Execution Phases
+Lexical Scope
+Hoisting
+Temporal Dead Zone
+Closures
+Prototypes and Prototype Chaining
+ES6 Classes
+Asynchronous JS &  Event Loop (Micro Task vs task Queue)
+Promises , async/await and Promise combinators
+
+
+LifeCycle of JS
+1. Global Executon Context                                   Queue=> Jobs=> Event Loop
+2. Lexical Environmnet                                       Call Stack => Execution Context 
+3. Env. Records  and  Outer Env.                             Heap => Objects
+                                                             Variables => Stack
+                                                             Function load in Stack along with Execution Context

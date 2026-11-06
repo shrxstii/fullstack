@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Last Over Cricket Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>🏏 Last Over</h1>
+    <h3>Mini Cricket Chase Game</h3>
+
+    <div class="settings">
+        <label>Difficulty: </label>
+        <select id="difficulty">
+            <option value="easy">Easy</option>
+            <option value="medium" selected>Medium</option>
+            <option value="hard">Hard</option>
+        </select>
+    </div>
+
+    <div class="scoreboard">
+
+        <div>
+            <h3>Runs</h3>
+            <p id="runs">0</p>
+        </div>
+
+        <div>
+            <h3>Balls Left</h3>
+            <p id="balls">6</p>
+        </div>
+
+        <div>
+            <h3>Wickets</h3>
+            <p id="wickets">0</p>
+        </div>
+
+        <div>
+            <h3>Target</h3>
+            <p id="target">12</p>
+        </div>
+
+    </div>
+
+    <h2 id="needed">12 Runs Needed</h2>
+
+    <div class="pitch" id="pitch">
+
+        <div class="stumps">🏏</div>
+
+        <div class="ball" id="ball">🔴</div>
+
+        <div class="batter">🏏</div>
+
+    </div>
+
+    <button id="hitButton" onclick="hitBall()" disabled>
+        HIT! (Spacebar)
+    </button>
+
+    <button onclick="startGame()">Start Game</button>
+
+    <h2 id="commentary">Click Start Game to Play!</h2>
+
+    <h2 id="result"></h2>
+
+    <p>Best Score: <span id="best">0</span></p>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
